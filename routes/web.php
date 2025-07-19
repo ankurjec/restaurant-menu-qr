@@ -17,9 +17,9 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('products', ProductController::class);
@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/menu', [ProductController::class, 'publicMenu'])->name('public.menu');
 
-Route::get('/qr-code', function () {
+Route::get('/', function () {
     $url = route('public.menu');
     return view('qr', compact('url'));
 });

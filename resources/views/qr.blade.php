@@ -6,6 +6,6 @@
     <div>
         {!! QrCode::size(250)->generate($url) !!}
     </div>
-    <p><a href="{{ $url }}" target="_blank">{{ $url }}</a></p>
+    {{-- <p><a href="{{ $url }}" target="_blank">{{ $url }}</a></p> --}}
 </div>
 @endsection
