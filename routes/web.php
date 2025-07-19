@@ -22,10 +22,11 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 // });
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('products', ProductController::class);
-    Route::resource('categories', CategoryController::class);
+   
 });
 
+ Route::resource('products', ProductController::class);
+    Route::resource('categories', CategoryController::class);
 
 Route::get('/menu', [ProductController::class, 'publicMenu'])->name('public.menu');
 

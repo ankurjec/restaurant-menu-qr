@@ -1,6 +1,7 @@
-@extends('layouts.app')
+{{-- @extends(view: 'layouts.app') --}}
 
    
+@extends('products.layout')
 
 @section('content')
 <div class="container">
